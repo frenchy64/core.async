@@ -23,7 +23,7 @@
             [clojure.core.async.impl.protocols :as impl]
             [clojure.core.async.impl.dispatch :as dispatch]
             [clojure.set :refer [intersection union difference]]
-            [cljs.core.async.impl.ioc-macros-common :refer :all])
+            [clojure.core.async.impl.ioc-macros-common :refer :all])
   (:import [java.util.concurrent.locks Lock]
            [java.util.concurrent.atomic AtomicReferenceArray]))
 
