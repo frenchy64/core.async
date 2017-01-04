@@ -9,7 +9,8 @@
 ;; by Timothy Baldridge
 ;; April 13, 2013
 
-(ns clojure.core.async.impl.ioc-macros-common)
+(ns clojure.core.async.impl.ioc-macros-common
+  (:require [clojure.pprint :refer [pprint]]))
 
 (def ^:const FN-IDX 0)
 (def ^:const STATE-IDX 1)
@@ -154,5 +155,3 @@
      [blk-id (get-block)
       _ (update-in-plan [:blocks blk-id] (fnil conj []) inst)]
      inst-id)))
-
-;;
