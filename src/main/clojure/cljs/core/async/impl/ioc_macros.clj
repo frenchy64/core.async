@@ -16,8 +16,20 @@
             [clojure.core.async.impl.protocols :as impl]
             [clojure.core.async.impl.dispatch :as dispatch]
             [cljs.analyzer :as cljs]
-            [clojure.core.async.impl.ioc-macros-common :refer :all])
+            [clojure.core.async.impl.ioc-macros-common 
+             :as ioc
+             :refer [gen-plan get-plan push-binding push-alter-binding get-binding 
+                     pop-binding no-op all assoc-in-plan update-in-plan get-in-plan 
+                     print-plan set-block get-block add-block instruction? add-instruction]])
   (:import [java.util.concurrent.locks Lock]))
+
+(def ^:const FN-IDX ioc/FN-IDX)
+(def ^:const STATE-IDX ioc/STATE-IDX)
+(def ^:const VALUE-IDX ioc/VALUE-IDX)
+(def ^:const BINDINGS-IDX ioc/BINDINGS-IDX)
+(def ^:const EXCEPTION-FRAMES ioc/EXCEPTION-FRAMES)
+(def ^:const CURRENT-EXCEPTION ioc/CURRENT-EXCEPTION)
+(def ^:const USER-START-IDX ioc/USER-START-IDX)
 
 (defn debug [x]
   (binding [*out* *err*]
