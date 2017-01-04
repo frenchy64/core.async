@@ -9,7 +9,7 @@
 ;; by Timothy Baldridge
 ;; April 13, 2013
 
-(ns cljs.core.async.impl.ioc-macros-common)
+(ns clojure.core.async.impl.ioc-macros-common)
 
 (def ^:const FN-IDX 0)
 (def ^:const STATE-IDX 1)

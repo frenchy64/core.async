@@ -16,7 +16,7 @@
             [clojure.core.async.impl.protocols :as impl]
             [clojure.core.async.impl.dispatch :as dispatch]
             [cljs.analyzer :as cljs]
-            [cljs.core.async.impl.ioc-macros-common :refer :all])
+            [clojure.core.async.impl.ioc-macros-common :refer :all])
   (:import [java.util.concurrent.locks Lock]))
 
 (defn debug [x]
